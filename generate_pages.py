@@ -7,18 +7,17 @@ music01.html ~ music10.html を生成します。
 import os
 
 # ─── パスワード一覧（8文字） ───────────────────────
-# くじの紙に印刷してプレゼントに同封してね！
 PASSWORDS = {
-    1:  "yokld45j",
-    2:  "ay2zgsms",
-    3:  "2err70lt",
-    4:  "lhyx8u8d",
-    5:  "9uwanxgf",
-    6:  "1xwt3iu4",
-    7:  "xy0100vy",
-    8:  "gx510unk",
-    9:  "st71unpc",
-    10: "u0vclygb",
+    "a-prize":   "yokld45j",
+    "b-prize":   "ay2zgsms",
+    "c-prize":   "2err70lt",
+    "d-prize-1": "lhyx8u8d",
+    "d-prize-2": "9uwanxgf",
+    "e-prize-1": "1xwt3iu4",
+    "e-prize-2": "xy0100vy",
+    "e-prize-3": "gx510unk",
+    "f-prize-1": "st71unpc",
+    "f-prize-2": "u0vclygb",
 }
 
 # ─── YouTube 動画データ ──────────────────────────────
@@ -47,18 +46,18 @@ YT_DATA = [
 ]
 
 # ─── 賞の定義 ─────────────────────────────────────────
-# (ファイル番号, 表示名, 絵文字)
+# (ファイル名スラッグ, 表示名, 絵文字, 音声ファイル名)
 PRIZES = [
-    (1,  "A賞",   "🥇"),
-    (2,  "B賞",   "🥈"),
-    (3,  "C賞",   "🥉"),
-    (4,  "D賞①",  "🎀"),
-    (5,  "D賞②",  "🎀"),
-    (6,  "E賞①",  "🌸"),
-    (7,  "E賞②",  "🌸"),
-    (8,  "E賞③",  "🌸"),
-    (9,  "F賞①",  "🎁"),
-    (10, "F賞②",  "🎁"),
+    ("a-prize",   "A賞",   "🥇", "a-prize.mp3"),
+    ("b-prize",   "B賞",   "🥈", "b-prize.mp3"),
+    ("c-prize",   "C賞",   "🥉", "c-prize.mp3"),
+    ("d-prize-1", "D賞①",  "🎀", "d-prize-1.mp3"),
+    ("d-prize-2", "D賞②",  "🎀", "d-prize-2.mp3"),
+    ("e-prize-1", "E賞①",  "🌸", "e-prize-1.mp3"),
+    ("e-prize-2", "E賞②",  "🌸", "e-prize-2.mp3"),
+    ("e-prize-3", "E賞③",  "🌸", "e-prize-3.mp3"),
+    ("f-prize-1", "F賞①",  "🎁", "f-prize-1.mp3"),
+    ("f-prize-2", "F賞②",  "🎁", "f-prize-2.mp3"),
 ]
 
 OWNER_LABELS = {"me": "わたしが選んだ", "you": "あなたが選んだ"}
@@ -87,7 +86,7 @@ TEMPLATE = '''<!DOCTYPE html>
         <div class="artwork-frame">
           <!--
             画像を追加するとき:
-            <img src="../images/music{num:02d}.jpg" alt="{prize_name}">
+            <img src="../images/{slug}.jpg" alt="{prize_name}">
           -->
           {emoji}
         </div>
@@ -125,7 +124,7 @@ TEMPLATE = '''<!DOCTYPE html>
               <div class="progress-fill"></div>
             </div>
             <p class="player-status">タップして聴いてね 🎀</p>
-            <p class="audio-error">⚠ 音声ファイルが見つかりません（audio/music{num:02d}.mp3）</p>
+            <p class="audio-error">⚠ 音声ファイルが見つかりません（audio/{audio_file}）</p>
           </div>
         </div>
 
@@ -198,7 +197,7 @@ TEMPLATE = '''<!DOCTYPE html>
   </footer>
 
   <audio id="track-audio" preload="none">
-    <source src="../audio/music{num:02d}.mp3" type="audio/mpeg">
+    <source src="../audio/{audio_file}" type="audio/mpeg">
   </audio>
 
   <script src="../js/password.js"></script>
@@ -207,21 +206,22 @@ TEMPLATE = '''<!DOCTYPE html>
 </html>
 '''
 
-out_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'music')
+out_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'kuji')
 os.makedirs(out_dir, exist_ok=True)
 
-print("=" * 48)
+print("=" * 52)
 print("🎁 おうちくじ パスワード一覧")
-print("=" * 48)
+print("=" * 52)
 
-for (num, prize_name, emoji), yt_pair in zip(PRIZES, YT_DATA):
+for (slug, prize_name, emoji, audio_file), yt_pair in zip(PRIZES, YT_DATA):
     yt1, yt2 = yt_pair
-    pw = PASSWORDS[num]
+    pw = PASSWORDS[slug]
 
     html = TEMPLATE.format(
-        num=num,
+        slug=slug,
         prize_name=prize_name,
         emoji=emoji,
+        audio_file=audio_file,
         password=pw,
         yt1_id=yt1[0], yt1_title=yt1[1], yt1_channel=yt1[2],
         yt1_owner=yt1[3], yt1_owner_label=OWNER_LABELS[yt1[3]],
@@ -229,13 +229,13 @@ for (num, prize_name, emoji), yt_pair in zip(PRIZES, YT_DATA):
         yt2_owner=yt2[3], yt2_owner_label=OWNER_LABELS[yt2[3]],
     )
 
-    path = os.path.join(out_dir, f'music{num:02d}.html')
+    path = os.path.join(out_dir, f'{slug}.html')
     with open(path, 'w', encoding='utf-8') as f:
         f.write(html)
 
-    print(f"  {prize_name:<6}  →  {pw}")
+    print(f"  {prize_name:<6}  →  {pw}  （kuji/{slug}.html）")
 
-print("=" * 48)
+print("=" * 52)
 print("✓ 全10ページ生成完了！")
 print()
 print("💡 くじの紙にパスワードを印刷してプレゼントに入れてね")

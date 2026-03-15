@@ -87,5 +87,5 @@ python3 generate_pages.py
 
 ## ローカルホストで確認
 ```bash
-python3 -m http.server 8080
+python3 -m http.server 8081
 ```
