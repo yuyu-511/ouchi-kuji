@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D賞② — おうちくじ</title>
+  <meta name="description" content="おうちくじ D賞②">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-password="9uwanxgf">
+
+  <header class="site-header">
+    <a class="back-link" href="../index.html">← くじ一覧</a>
+    <nav></nav>
+  </header>
+
+  <div class="page-wrap">
+
+    <section class="kuji-hero">
+      <div class="letter-card">
+
+        <div class="artwork-frame">
+          <!--
+            画像を追加するとき:
+            <img src="../images/music05.jpg" alt="D賞②">
+          -->
+          🎀
+        </div>
+
+        <div class="letter-eyebrow fade-up">
+          <span class="dot"></span>
+          おうちくじ &nbsp;/&nbsp; D賞②
+        </div>
+
+        <h1 class="letter-title fade-up">
+          <span class="num-accent">D賞②</span>の<br>メッセージ
+        </h1>
+
+        <p class="letter-desc fade-up">
+          ボイスメッセージを聴いてから、<br>
+          一緒に動画も楽しもうね 🎀
+        </p>
+
+        <div class="voice-player fade-up">
+          <button class="play-btn" id="play-btn" aria-label="再生 / 一時停止">
+            <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+            <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+            </svg>
+          </button>
+          <div class="player-controls">
+            <div class="player-label">🎙 ボイスメッセージ</div>
+            <div class="player-time">
+              <span class="time-current">0:00</span>
+              <span class="time-total">0:00</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill"></div>
+            </div>
+            <p class="player-status">タップして聴いてね 🎀</p>
+            <p class="audio-error">⚠ 音声ファイルが見つかりません（audio/music05.mp3）</p>
+          </div>
+        </div>
+
+        <div class="waveform-deco">
+          <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+          <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+          <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+        </div>
+
+        <div class="scroll-hint">
+          <span class="hint-emoji">▽</span>
+          スクロールして動画へ
+        </div>
+
+      </div>
+    </section>
+
+    <section class="today-section">
+      <div class="today-header">
+        <div class="today-badge">🎬 YouTube</div>
+        <h2>この動画、一緒に見よ！</h2>
+        <p class="today-sub">
+          <!-- ここの文言は自由に編集してね -->
+        </p>
+      </div>
+
+      <div class="fav-section">
+        <div class="fav-cards">
+
+          <div class="fav-card">
+            <div class="yt-embed-wrap" data-ytid="CevxZvSJLk8">
+              <div class="yt-thumbnail">
+                <img src="https://img.youtube.com/vi/CevxZvSJLk8/mqdefault.jpg"
+                     alt="Radioactive" loading="lazy">
+                <div class="yt-play-icon"></div>
+              </div>
+              <span class="yt-owner-tag me">わたしが選んだ</span>
+            </div>
+            <div class="fav-card-body">
+              <p class="fav-card-title">Radioactive</p>
+              <p class="fav-card-channel">Imagine Dragons</p>
+            </div>
+          </div>
+
+          <div class="fav-card">
+            <div class="yt-embed-wrap" data-ytid="hLQl3WQQoQ0">
+              <div class="yt-thumbnail">
+                <img src="https://img.youtube.com/vi/hLQl3WQQoQ0/mqdefault.jpg"
+                     alt="Someone You Loved" loading="lazy">
+                <div class="yt-play-icon"></div>
+              </div>
+              <span class="yt-owner-tag you">あなたが選んだ</span>
+            </div>
+            <div class="fav-card-body">
+              <p class="fav-card-title">Someone You Loved</p>
+              <p class="fav-card-channel">Lewis Capaldi</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="site-footer">
+    <a href="../index.html">おうちくじ</a>
+    &nbsp;·&nbsp; D賞②
+    &nbsp;<span class="heart">♡</span>
+  </footer>
+
+  <audio id="track-audio" preload="none">
+    <source src="../audio/music05.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="../js/password.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>
