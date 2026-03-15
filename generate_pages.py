@@ -48,16 +48,16 @@ YT_DATA = [
 # ─── 賞の定義 ─────────────────────────────────────────
 # (ファイル名スラッグ, 表示名, 絵文字, 音声ファイル名)
 PRIZES = [
-    ("a-prize",   "A賞",   "🥇", "a-prize.mp3"),
-    ("b-prize",   "B賞",   "🥈", "b-prize.mp3"),
-    ("c-prize",   "C賞",   "🥉", "c-prize.mp3"),
-    ("d-prize-1", "D賞①",  "🎀", "d-prize-1.mp3"),
-    ("d-prize-2", "D賞②",  "🎀", "d-prize-2.mp3"),
-    ("e-prize-1", "E賞①",  "🌸", "e-prize-1.mp3"),
-    ("e-prize-2", "E賞②",  "🌸", "e-prize-2.mp3"),
-    ("e-prize-3", "E賞③",  "🌸", "e-prize-3.mp3"),
-    ("f-prize-1", "F賞①",  "🎁", "f-prize-1.mp3"),
-    ("f-prize-2", "F賞②",  "🎁", "f-prize-2.mp3"),
+    ("a-prize",   "A賞",   "🥇", "a-prize.m4a"),
+    ("b-prize",   "B賞",   "🥈", "b-prize.m4a"),
+    ("c-prize",   "C賞",   "🥉", "c-prize.m4a"),
+    ("d-prize-1", "D賞①",  "🎀", "d-prize-1.m4a"),
+    ("d-prize-2", "D賞②",  "🎀", "d-prize-2.m4a"),
+    ("e-prize-1", "E賞①",  "🌸", "e-prize-1.m4a"),
+    ("e-prize-2", "E賞②",  "🌸", "e-prize-2.m4a"),
+    ("e-prize-3", "E賞③",  "🌸", "e-prize-3.m4a"),
+    ("f-prize-1", "F賞①",  "🎁", "f-prize-1.m4a"),
+    ("f-prize-2", "F賞②",  "🎁", "f-prize-2.m4a"),
 ]
 
 OWNER_LABELS = {"me": "わたしが選んだ", "you": "あなたが選んだ"}

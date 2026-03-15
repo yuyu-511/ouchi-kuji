@@ -13,8 +13,8 @@ music-site/
 │   ├── ...
 │   └── music10.html        # Track 10
 ├── audio/
-│   ├── music01.mp3         # 自作音声ファイル（要配置）
-│   ├── music02.mp3
+│   ├── music01.m4a         # 自作音声ファイル（要配置）
+│   ├── music02.m4a
 │   └── ...
 ├── images/
 │   ├── music01.jpg         # アートワーク画像（任意・後から追加可）
@@ -52,7 +52,7 @@ git push -u origin main
 ## 📝 カスタマイズ方法
 
 ### 音声ファイルを追加する
-`audio/music01.mp3` のように配置するだけで自動的に再生ボタンと紐づきます。
+`audio/music01.m4a` のように配置するだけで自動的に再生ボタンと紐づきます。
 
 ### アートワーク画像を追加する（後から可）
 `images/music01.jpg` に画像を配置してから、
