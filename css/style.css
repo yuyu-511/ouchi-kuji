@@ -22,9 +22,9 @@
   --border-acc:   rgba(201,97,74,0.35);
   --shadow:       0 4px 20px rgba(100,60,40,0.10);
   --shadow-card:  0 8px 32px rgba(100,60,40,0.12);
-  --font-main:    'Klee One', 'Hiragino Maru Gothic Pro', cursive;
+  --font-main:    'Klee One', sans-serif;
   --font-zen:     'Zen Maru Gothic', sans-serif;
-  --font-deco:    'Caveat', cursive;
+  --font-deco:    'Caveat', sans-serif;
   --radius:       16px;
   --radius-lg:    24px;
   --radius-xl:    32px;

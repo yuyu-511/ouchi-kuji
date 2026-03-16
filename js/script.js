@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (waveform) waveform.classList.remove('playing');
       if (progressFill) progressFill.style.width = '0%';
       if (timeEl) timeEl.textContent = '0:00';
-      if (statusEl) { statusEl.textContent = 'タップして聴いてね 🎀'; statusEl.classList.remove('active'); }
+      if (statusEl) { statusEl.textContent = 'タップして聴いてね '; statusEl.classList.remove('active'); }
     });
 
     audioEl.addEventListener('timeupdate', () => {

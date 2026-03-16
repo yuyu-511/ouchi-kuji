@@ -23,10 +23,10 @@ PASSWORDS = {
 # ─── YouTube 動画データ ──────────────────────────────
 # (video_id, タイトル, アーティスト, "me" or "you")
 YT_DATA = [
-    [ ("dQw4w9WgXcQ", "Never Gonna Give You Up", "Rick Astley",     "me"),
-      ("kXYiU_JCYtU", "Numb",                    "Linkin Park",     "you") ],
-    [ ("JGwWNGJdvx8", "Shape of You",             "Ed Sheeran",     "me"),
-      ("YqeW9_5kURI", "Someone Like You",          "Adele",          "you") ],
+    [ ("8qI-ITMED1Y", "Miss", "Florence Road",     "me"),
+      ("rw10Q_mVJeY", "君の声",                    "MyDearDarlin'",     "you") ],
+    [ ("tAEyAGcmHKk", "出所",             "家族チャーハン",     "me"),
+      ("QOmHcuQYLyY", "バーのマスター",          "フースーヤ",          "you") ],
     [ ("lp-EO5I60KA", "Bohemian Rhapsody",        "Queen",          "me"),
       ("fJ9rUzIMcZQ", "Stairway to Heaven",        "Led Zeppelin",   "you") ],
     [ ("1G6tftTrUHgg", "Numb Little Bug",          "Em Beihold",    "me"),
@@ -51,8 +51,8 @@ PRIZES = [
     ("a-prize",   "A賞",   "🥇", "a-prize.m4a"),
     ("b-prize",   "B賞",   "🥈", "b-prize.m4a"),
     ("c-prize",   "C賞",   "🥉", "c-prize.m4a"),
-    ("d-prize-1", "D賞①",  "🎀", "d-prize-1.m4a"),
-    ("d-prize-2", "D賞②",  "🎀", "d-prize-2.m4a"),
+    ("d-prize-1", "D賞①",  "", "d-prize-1.m4a"),
+    ("d-prize-2", "D賞②",  "", "d-prize-2.m4a"),
     ("e-prize-1", "E賞①",  "🌸", "e-prize-1.m4a"),
     ("e-prize-2", "E賞②",  "🌸", "e-prize-2.m4a"),
     ("e-prize-3", "E賞③",  "🌸", "e-prize-3.m4a"),
@@ -60,7 +60,7 @@ PRIZES = [
     ("f-prize-2", "F賞②",  "🎁", "f-prize-2.m4a"),
 ]
 
-OWNER_LABELS = {"me": "わたしが選んだ", "you": "あなたが選んだ"}
+OWNER_LABELS = {"me": "your favorite song", "you": "my favorite song"}
 
 TEMPLATE = '''<!DOCTYPE html>
 <html lang="ja">
@@ -101,8 +101,8 @@ TEMPLATE = '''<!DOCTYPE html>
         </h1>
 
         <p class="letter-desc fade-up">
-          ボイスメッセージを聴いてから、<br>
-          一緒に動画も楽しもうね 🎀
+          ボイスメッセージですっ<br><br>
+          下の動画も一緒に見ようねっ！
         </p>
 
         <div class="voice-player fade-up">
@@ -123,7 +123,7 @@ TEMPLATE = '''<!DOCTYPE html>
             <div class="progress-bar">
               <div class="progress-fill"></div>
             </div>
-            <p class="player-status">タップして聴いてね 🎀</p>
+            <p class="player-status">タップして聴いてね </p>
             <p class="audio-error">⚠ 音声ファイルが見つかりません（audio/{audio_file}）</p>
           </div>
         </div>
