@@ -24,25 +24,25 @@ PASSWORDS = {
 # (video_id, タイトル, アーティスト, "me" or "you")
 YT_DATA = [
     [ ("8qI-ITMED1Y", "Miss", "Florence Road",     "me"),
+      ("06E14_7t710", "ネーブルオレンジ",               "乃木坂46",     "you") ],
+    [ ("Ik2Mp8S6AMQ", "大丈夫",              "般若",      "me"),
+      ("manIJU0GybQ", "そうだ、僕は恋をしたんだ。",              "手羽先センセーション",   "you") ],
+    [ ("Creg6oEIsNw", "Bitch",                   "Hannah Grae",    "me"),
       ("rw10Q_mVJeY", "君の声",                    "MyDearDarlin'",     "you") ],
+    [ ("qzl4Gy0thqA", "ペンギンの赤ちゃん",              "あにまるず",       "me"),
+      ("SxBcSL45SoY", "イルカのショー",                  "やまかんりにん","you") ],
+    [ ("mIX-wEpFcdE", "アフリカヤマネ",        "ててらぼペット部",          "me"),
+      ("loji6Wvz4tU", "シマエナガ",        "tabinotomo",   "you") ],
     [ ("tAEyAGcmHKk", "出所",             "家族チャーハン",     "me"),
       ("QOmHcuQYLyY", "バーのマスター",          "フースーヤ",          "you") ],
-    [ ("lp-EO5I60KA", "Bohemian Rhapsody",        "Queen",          "me"),
-      ("fJ9rUzIMcZQ", "Stairway to Heaven",        "Led Zeppelin",   "you") ],
-    [ ("1G6tftTrUHgg", "Numb Little Bug",          "Em Beihold",    "me"),
-      ("4NRXx6U8BFQ",  "abcdefu",                  "GAYLE",          "you") ],
-    [ ("CevxZvSJLk8", "Radioactive",               "Imagine Dragons","me"),
-      ("hLQl3WQQoQ0", "Someone You Loved",         "Lewis Capaldi",  "you") ],
-    [ ("60ItHLz5WEA", "Africa",                    "Toto",           "me"),
-      ("7wtfhZwyrcc", "Take On Me",                "a-ha",           "you") ],
-    [ ("2Vv-BfVoq4g", "Perfect",                   "Ed Sheeran",    "me"),
-      ("OPf0YbXqDm0", "Uptown Funk",               "Bruno Mars",     "you") ],
-    [ ("09R8_2nJtjg", "Stay With Me",              "Sam Smith",      "me"),
-      ("nfWlot6h_JM", "Shake It Off",              "Taylor Swift",   "you") ],
-    [ ("djV11Xbc914", "Africa (Weezer cover)",     "Weezer",        "me"),
-      ("YkgkThdzX-8", "Watermelon Sugar",          "Harry Styles",   "you") ],
-    [ ("RBumgq5yVrA", "Viva la Vida",              "Coldplay",       "me"),
-      ("1qN72LEQnaU", "Believer",                  "Imagine Dragons","you") ],
+    [ ("Lv_0wD9p2rk", "交換日記",          "陣内智則",    "me"),
+      ("DCqBgBghnGk", "プロ野球選手",          "NONSTYLE",          "you") ],
+    [ ("tUSe0VP4ZBo", "feels like HEAVEN",     "バカリズム",        "me"),
+      ("Z4j4TR9Gmzo", "旅館",          "ヤーレンズ",   "you") ],
+    [ ("yWISbDZxvAg", "フグのてっちり",               "エマスちゃんねる","me"),
+      ("4t8JCicyYfc", "英語禁止人狼",         "QuizKnock",  "you") ],
+    [ ("YFvJOPSgwN4?", "シェフ500円 vs 素人10,000円 料理対決",                    "川越シェフだぜ。",           "me"),
+      ("rSm1vaphnQY", "3人でおもちづくり",                "よにのちゃんねる",           "you") ],
 ]
 
 # ─── 賞の定義 ─────────────────────────────────────────
@@ -51,8 +51,8 @@ PRIZES = [
     ("a-prize",   "A賞",   "🥇", "a-prize.m4a"),
     ("b-prize",   "B賞",   "🥈", "b-prize.m4a"),
     ("c-prize",   "C賞",   "🥉", "c-prize.m4a"),
-    ("d-prize-1", "D賞①",  "", "d-prize-1.m4a"),
-    ("d-prize-2", "D賞②",  "", "d-prize-2.m4a"),
+    ("d-prize-1", "D賞①",  "🎀", "d-prize-1.m4a"),
+    ("d-prize-2", "D賞②",  "🎀", "d-prize-2.m4a"),
     ("e-prize-1", "E賞①",  "🌸", "e-prize-1.m4a"),
     ("e-prize-2", "E賞②",  "🌸", "e-prize-2.m4a"),
     ("e-prize-3", "E賞③",  "🌸", "e-prize-3.m4a"),
@@ -60,7 +60,21 @@ PRIZES = [
     ("f-prize-2", "F賞②",  "🎁", "f-prize-2.m4a"),
 ]
 
-OWNER_LABELS = {"me": "your favorite song", "you": "my favorite song"}
+# ─── today-sub 文言 ───────────────────────────────────
+TODAY_SUB = {
+    "a-prize":   "今日の動画は音楽！一つ目は最近いちばんハマってるアーティストの曲をピックしてみましたっ！ 二人の再生リストにも別の曲が追加してあるんだけど、これもおすすめだから聞いてみてっ　二つ目はネーブルオレンジ！最初の頃にライブで聞いたやつで思い出の曲！中でも思い入れ強めな大好きなやつなんですっ",
+    "b-prize":   "今日の動画は音楽ですっ！一つ目の曲はおれが中学生くらいの頃からのお気に入りで、じわじわじーんと系のやつですっ で、手羽センの方はゆりあが上手なやつう！大好きな曲ですっ！",
+    "c-prize":   "今日の動画は音楽だよーっ！ 一つ目の方は最近気に入ってるアーティストさんなんですっ！まだ新しいレーベルになってからはほぼ曲出てないんだけど、これお気に入り！で、二つ目のまいでぃあの君の声はリストの一番上にあるやつで、おれも大好きなんですっ！今日は一緒に音楽聴こうねーっ",
+    "d-prize-1": "今日の動画はどうぶつーーー！一つ目はぺんぎんですっ、で、二つ目はイルカ！夏くらいに名古屋港で両方見たよねーっ！楽しかったなあ。実はペンギン飼えるらしくて、かわいいよねーっ",
+    "d-prize-2": "今日の動画は動物ですっ！一つ目はね、ヤマネです！こないだ教えてもらってからハマってるやーつっ！大好き！二つ目はシマエナガですう！これもゆりあに教えてもらってからおれも大好きになったんだよねー。いつか生で見てみたいですねっ",
+    "e-prize-1": "今日の動画はお笑いですっ！ふたりとも大好きなお笑い！一つ目の動画はたぶん知らないと思うけど、個人的にめちゃ大好きで、応援してる芸人さんですっ！面白いから見てみてっ！二つ目は元気でるやつ！ゆりあ大好きだもんねーっふたりで終わら見て元気だそう！！",
+    "e-prize-2": "今日の動画はお笑い！！一つ目はおれが小学生のころくらいから大好きなネタなんですよお。なんか本当はこの続きみたいなのもあった気がするんだけど、、、めちゃ面白くて好きなやつ！二つ目はのんすたあ！TimeTreeでもいつかライブ行きたいねーって言って追加してたよね。のんすたらいぶ行きたいねーっ",
+    "e-prize-3": "今日の動画はお笑いの動画だよお。一つ目はバカリズムさんの「信用」っていうライブのやつ！このライブめちゃ好きでどれも面白いんだけど、今公開されてる中で一番好きなやつをピックしてみましたあ！二つ目はヤーレンズ！ゆりあヤーレンズ大好きだもんねーっ笑 おれも大好き！一緒にたくさん笑おうねっ！",
+    "f-prize-1": "今日の動画はYouTuberの動画なの！一つ目は、実は割とよく見てる好きなYouTuberさんの動画なんですっ 生き物系の動画上げる人でなんかちゃんと愛を持って動物と接してそうな感じが好きなんだよねー。二つ目はくいずのーっく！なんか英語禁止企画っていうわりと王道な企画してたんだけど、めちゃおもしろかったっ！一緒にみましょっ",
+    "f-prize-2": "今日の動画はYouTuberの動画です！一つ目はね、最近ハマってる料理の方の動画です！対決企画が面白いんだよー！二つ目はよにのちゃんねる！こっちもお料理してるやつあったから選んでみましたっ よにのちゃんねるで料理してるの珍しいらしくて二個しかなかったっ 面白かったから一緒にみよーねっ！",
+}
+
+OWNER_LABELS = {"me": "my favorite song", "you": "your favorite song"}
 
 TEMPLATE = '''<!DOCTYPE html>
 <html lang="ja">
@@ -147,7 +161,7 @@ TEMPLATE = '''<!DOCTYPE html>
         <div class="today-badge">🎬 YouTube</div>
         <h2>この動画、一緒に見よ！</h2>
         <p class="today-sub">
-          <!-- ここの文言は自由に編集してね -->
+          {today_sub}
         </p>
       </div>
 
@@ -223,6 +237,7 @@ for (slug, prize_name, emoji, audio_file), yt_pair in zip(PRIZES, YT_DATA):
         emoji=emoji,
         audio_file=audio_file,
         password=pw,
+        today_sub=TODAY_SUB[slug],
         yt1_id=yt1[0], yt1_title=yt1[1], yt1_channel=yt1[2],
         yt1_owner=yt1[3], yt1_owner_label=OWNER_LABELS[yt1[3]],
         yt2_id=yt2[0], yt2_title=yt2[1], yt2_channel=yt2[2],
