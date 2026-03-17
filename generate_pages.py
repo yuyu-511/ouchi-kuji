@@ -211,7 +211,7 @@ TEMPLATE = '''<!DOCTYPE html>
   </footer>
 
   <audio id="track-audio" preload="none">
-    <source src="../audio/{audio_file}" type="audio/mpeg">
+    <source src="../audio/{audio_file}" type="audio/mp4">
   </audio>
 
   <script src="../js/password.js"></script>
